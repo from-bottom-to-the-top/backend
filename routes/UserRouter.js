@@ -1,7 +1,6 @@
 import { Router } from "express";
-import { db } from "./database";
+import userController from "../controller/user.controller";
 const route = Router();
-import userController from "./controller/user.controller";
 
 route.get("/", userController.index);
 route.post("/add", userController.create);
